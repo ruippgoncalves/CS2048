@@ -8,12 +8,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Install Dependencies
+    
+    - name: Run Django unit tests
       run: |
-        python3 -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run Tests
-      run: |
+        pip3 install --user django
         python3 manage.py test
