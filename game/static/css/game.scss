@@ -1,0 +1,44 @@
+$containerColor: rgb(117, 86, 1);
+
+$cellSide: 9vh;
+$cellColor: rgb(218, 218, 168);
+
+.gameContainer {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: $containerColor;
+    padding: $cellSide / 7;
+    border-radius: $cellSide / 7;
+
+    .gameRow {
+        margin-bottom: $cellSide / 21;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .gameCell {
+            display: inline-block;
+            width: $cellSide;
+            height: $cellSide;
+            margin: $cellSide / 21;
+            background-color: $cellColor;
+            vertical-align: top;
+
+            border-radius: $cellSide / 7;
+            text-align: center;
+            font-size: $cellSide / 5 * 2;
+            line-height: $cellSide;
+        }
+    }
+}
+
+html, body {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    overflow: hidden;
+}

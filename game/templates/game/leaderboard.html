@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}LeaderBoard{% endblock %}
+{% block body %}
+{% if content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">User Name</th>
+            <th scope="col">Value</th>
+            <th scope="col">Time (s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for leader in content %}
+        <tr>
+            <td>{{ leader.username }}</td>
+            <td>{{ leader.value }}</td>
+            <td>{{ leader.time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="mt-2" style="text-align: center;">No one played yet! :(</p>
+{% endif %}
+{% endblock %}

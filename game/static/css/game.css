@@ -1,0 +1,39 @@
+.gameContainer {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #755601;
+  padding: 1.28571vh;
+  border-radius: 1.28571vh;
+}
+
+.gameContainer .gameRow {
+  margin-bottom: 0.42857vh;
+}
+
+.gameContainer .gameRow:last-child {
+  margin-bottom: 0;
+}
+
+.gameContainer .gameRow .gameCell {
+  display: inline-block;
+  width: 9vh;
+  height: 9vh;
+  margin: 0.42857vh;
+  background-color: #dadaa8;
+  vertical-align: top;
+  border-radius: 1.28571vh;
+  text-align: center;
+  font-size: 3.6vh;
+  line-height: 9vh;
+}
+
+html, body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+/*# sourceMappingURL=game.css.map */

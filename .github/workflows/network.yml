@@ -1,0 +1,19 @@
+name: CS2048 CI
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: |
+        python3 -m pip3 install --upgrade pip3
+        pip3 install -r requirements.txt
+
+    - name: Run Tests
+      run: |
+        python3 manage.py test
